@@ -12,7 +12,7 @@ class Header extends Component {
         <div className={classes.logo}>
           <img
             src="https://img.icons8.com/dotty/80/000000/happy-cloud.png"
-            alt="happy-cloud"
+            alt="happy-cloud1"
           />
         </div>
       </AppBar>
