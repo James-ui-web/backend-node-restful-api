@@ -6,7 +6,6 @@ import DataLists from "./DataLists.js";
 class Crud extends Component {
   constructor(props) {
     super(props);
-    console.log(this.props.x);
     this.state = {
       dataLists: [
         {
