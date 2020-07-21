@@ -6,7 +6,7 @@ exports.create = function(req, res) {
         res.status(400).send({message: "Note can not be empty"});
     }
 
-    var note = new Note({title: req.body.title || "Untitled Note", content: req.body.content});
+    var note = new Note({id: req.body.id|| "Uncounted note", title: req.body.title || "Untitled Note", content: req.body.content});
 
     note.save(function(err, data) {
         if(err) {
@@ -47,6 +47,7 @@ exports.update = function(req, res) {
             res.status(500).send({message: "Could not find a note with id " + req.params.noteId});
         }
 
+        note.id = req.body.id;
         note.title = req.body.title;
         note.content = req.body.content;
 

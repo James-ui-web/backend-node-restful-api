@@ -6,6 +6,9 @@ module.exports = function(app) {
     app.post('/notes', notes.create);
 
     // Retrieve all Notes
+    app.post('/notes/getAll', notes.findAll);
+
+    // Retrieve all Notes
     app.get('/notes', notes.findAll);
 
     // Retrieve a single Note with noteId
